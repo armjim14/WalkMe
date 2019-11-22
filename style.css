@@ -1,0 +1,16 @@
+.next {
+    color: black;
+    font-weight: bold;
+}
+
+.next:hover {
+    cursor: pointer;
+}
+
+#first, #second, #third, #fourth {
+    visibility: hidden;
+}
+
+#spec {
+    visibility: hidden;
+}
