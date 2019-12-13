@@ -1,0 +1,43 @@
+body {
+    background-image: url("../images/background.jpg");
+    color: white;
+}
+  
+.pageTitle {
+    font-size: 2rem;
+}
+  
+.nav-link {
+    font-size: 1.25rem;
+}
+
+.w-50 {
+    width: 49%;
+    float: left;
+    height: 125px;
+    line-height: 125px;
+}
+
+.forLink {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.forLink:hover {
+    cursor: pointer;
+    background-color: #212121;
+}
+
+hr {
+    border: white 1px solid;
+}
+
+.little {
+    border: white 1px solid;
+    width: 50%;
+}
+
+section {
+    width: 100%;
+    height: 110px;
+}

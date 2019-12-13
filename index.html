@@ -5,93 +5,113 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="boot.css">
-    <link rel="stylesheet" href="style.css">
+    <title>Home</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/boot1.css">
+    <link rel="stylesheet" href="./css/boot2.css">
+    <link rel="stylesheet" href="./css/setup.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
-<body class="bg-secondary">
-    <div class="container-fluid">
+<body>
+    <header>
+        <!-- -------- -->
+        <!-- for navbar -->
+        <!-- -------- -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-0">
+            <a class="navbar-brand pageTitle" href="index.html">Car Detail</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-        <div class="row mb-5">
-            <div class="col-md-12 mt-3">
-                <h1 class="text-center text-white">
-                    WalkMe
-                </h1>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="services.html">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="about.html">About</a>
+                    </li>
+                </ul>
             </div>
+        </nav>
+        <!-- -------- -->
+        <!-- ending navbar -->
+        <!-- -------- -->
+    </header>
+
+    <section>
+        <div class="w-50">
+            <p id="service" class="forLink">
+                Services
+            </p>
+        </div>
+        <div class="w-50">
+            <p id="about" class="forLink">
+                About us
+            </p>
+        </div>
+    </section>
+    <hr>
+
+    <div id="feedback">
+        <p id="forFeedback">This is the message as it would appear</p>
+    </div>
+
+    <section>
+        <h1 class="title mb-3">Contact</h1>
+        <p class="message">*Upload images first! When submitted image will appear. To delete click on image.</p>
+        <div class="mb-4">
+            <form action="/upload" method="POST" enctype="multipart/form-data">
+                <div class="center-w mb-2">
+                    <input class="btn btn-outline-dark text-white" type="file" name="myImage" id="myImage">
+                </div>
+                <div class="center-w">
+                    <button class="btn btn-outline-dark text-white" id="upload" type="submit">Upload Image</button>
+                </div>
+            </form>
+        </div>
+        <hr class="little">
+
+        <div id="allImages" class="center-w">
         </div>
 
-        <div class="row pt-3 mb-5">
-            <div class="col-md-6">
-                <div id="zero" class="alert alert-success text-center" role="alert">
-                    First enter your full name! <span class="next">Next</span>
-                </div>
+        <form id="sendEmail">
+            <p class="message"><span style="color: red;">* </span>Email:</p>
+            <div class="center-w mb-3">
+                <input class="textStuff" type="email" id="email" required>
             </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Full Name" aria-label="Full Name"
-                        aria-describedby="basic-addon1">
-                </div>
+            <p class="message">Message:</p>
+            <div class="center-w mb-4">
+                <textarea class="textStuff" type="text" id="message"></textarea>
             </div>
-        </div>
+            <div class="center-w">
+                <button class="btn btn-outline-primary text-white" type="submit">Send</button>
+            </div>
+        </form>
+    </section>
 
-        <div class="row pt-3  mb-5">
-            <div class="col-md-6">
-                <div id="first" class="alert alert-success text-center" role="alert">
-                    Enter your favorite number! <span class="next">Next</span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="number" class="form-control" placeholder="Favorite number" aria-label="Favorite number"
-                        aria-describedby="basic-addon1">
-                </div>
-            </div>
-        </div>
+    <!-- modal code will start here -->
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
 
-        <div class="row pt-3  mb-5">
-            <div class="col-md-6">
-                <div id="second" class="alert alert-success text-center" role="alert">
-                    Enter your favorite book! <span class="next">Next</span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Favorite book" aria-label="Favorite book"
-                        aria-describedby="basic-addon1">
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-3 mb-5">
-            <div class="col-md-6">
-                <div id="third" class="alert alert-success text-center" role="alert">
-                    Enter your favorite song! <span class="next">Next</span>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="input-group mb-3">
-                    <input type="text" class="form-control" placeholder="Favorite song" aria-label="Favorite song"
-                        aria-describedby="basic-addon1">
-                </div>
-            </div>
-        </div>
-
-        <div class="row pt-3 mb-5">
-            <div class="col-md-6">
-                <div id="fourth" class="alert alert-primary text-center" role="alert">
-                    Submit your form!
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div id="spec" class="input-group mb-3">
-                    <input type="button" class="btn btn-primary" value="Submit">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p class="text-black">Delete Image?</p>
+            <div class="otterOne">
+                <div class="innerOne">
+                    <button id="yesDelete" class="btn btn-danger">Yes</button>
+                    <button id="noDelete" class="btn btn-secondary float-right">No</button>
                 </div>
             </div>
         </div>
 
     </div>
-    <script src="logic.js"></script>
+    <!-- modal code ends here -->
+
+<script src="javaScript/jQuery.js"></script>
+<script src="javaScript/logic.js"></script>
 </body>
 
 </html>
