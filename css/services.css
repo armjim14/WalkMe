@@ -12,3 +12,9 @@ h3 {
     font-size: 2.15rem;
     text-align: center;
 }
+
+@media screen and ( max-width: 625px ){
+    .innerBox {
+        width: 90%;
+    }
+}
